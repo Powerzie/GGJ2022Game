@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float Speed = 30;
+    public float Speed = 1;
     public float JumpForce = 300f;
-    public const float MAX_SPEED = 100;
+    public  float MAX_SPEED = 8;
 
-    public Vector3 startMovementSpeed;
     private Rigidbody targetRigidbody;
     private bool _isGrounded;
 
@@ -16,17 +15,18 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         targetRigidbody = GetComponent<Rigidbody>();
-        startMovementSpeed = new Vector3(1.0f, 0.0f, 1.0f);
+
     }
     private void FixedUpdate()
     {
-        MovementLogic();
+       if( targetRigidbody.velocity.magnitude <= MAX_SPEED && targetRigidbody.velocity.magnitude >= MAX_SPEED*-1)
+            MovementLogic();
     }
   private  void MovementLogic()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
 
-        float moveVertical = Input.GetAxis("Vertical");
+        float moveHorizontal = Input.GetAxisRaw("Horizontal");
+        float moveVertical = Input.GetAxisRaw("Vertical");
         Vector3 movement;
         if (moveHorizontal!=0.0f && moveVertical!=0.0f)
         {
@@ -37,6 +37,6 @@ public class PlayerMovement : MonoBehaviour
             movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
         }
 
-        targetRigidbody.AddForce(movement * Speed);
+        targetRigidbody.AddForce(movement * Speed * Time.deltaTime,ForceMode.VelocityChange);
     }
 }
