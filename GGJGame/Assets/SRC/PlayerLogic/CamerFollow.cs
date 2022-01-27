@@ -6,12 +6,13 @@ public class CamerFollow : MonoBehaviour
 {
    public Transform targetTransform;
    public Vector3 cameraOffset;
+    public float followSpeed=2.0f;
 
     private void Start()
     {
     }
     void Update()
     {
-            transform.position = Vector3.Lerp( transform.position, targetTransform.position + cameraOffset, 2f*Time.deltaTime);
+            transform.position = Vector3.Lerp( transform.position, targetTransform.position + cameraOffset, followSpeed * Time.deltaTime);
     }
 }
