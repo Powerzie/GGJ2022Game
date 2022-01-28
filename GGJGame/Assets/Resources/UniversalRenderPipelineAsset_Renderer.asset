@@ -35,9 +35,9 @@ MonoBehaviour:
   m_DefaultStencilState:
     overrideStencilState: 0
     stencilReference: 0
-    stencilCompareFunction: 8
-    passOperation: 2
-    failOperation: 0
+    stencilCompareFunction: 0
+    passOperation: 6
+    failOperation: 5
     zFailOperation: 0
   m_ShadowTransparentReceive: 1
   m_RenderingMode: 0
