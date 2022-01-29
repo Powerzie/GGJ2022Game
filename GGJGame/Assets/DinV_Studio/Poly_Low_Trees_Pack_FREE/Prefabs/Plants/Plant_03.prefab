@@ -167,7 +167,6 @@ GameObject:
   - component: {fileID: 7035233211600787331}
   - component: {fileID: 5712356934885536499}
   - component: {fileID: 2206514153131213425}
-  - component: {fileID: 8938256242839549226}
   m_Layer: 0
   m_Name: Plant_03_LOD0
   m_TagString: Untagged
@@ -238,19 +237,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8938256242839549226
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5516155810651593987}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.9610614, y: 0.26528662, z: 0.8590143}
-  m_Center: {x: -0.024261147, y: 0.13240233, z: -0.013219222}
 --- !u!1 &5746703710772311696
 GameObject:
   m_ObjectHideFlags: 0
