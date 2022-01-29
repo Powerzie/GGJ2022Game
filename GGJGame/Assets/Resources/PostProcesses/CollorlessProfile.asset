@@ -32,7 +32,7 @@ MonoBehaviour:
     value: 1
   gradingMode:
     overrideState: 1
-    value: 0
+    value: 1
   externalLut:
     overrideState: 1
     value: {fileID: 10912, guid: 0000000000000000f000000000000000, type: 0}

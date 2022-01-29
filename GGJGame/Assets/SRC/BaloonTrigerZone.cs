@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-enum BaloonTrigers { Show,Hide};
+enum BaloonTrigers { Show ,Hide};
 public class BaloonTrigerZone : MonoBehaviour
 {
     public GameObject targetBaloon;
@@ -15,15 +15,12 @@ public class BaloonTrigerZone : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag=="Player")
-        targetAnimator.SetTrigger("Show");
+        targetAnimator.SetTrigger(BaloonTrigers.Show.ToString());
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Player")
-            targetAnimator.SetTrigger("Hide");
-
-      //  targetAnimator.SetTrigger((int)BaloonTrigers.Hide);
-
+            targetAnimator.SetTrigger(BaloonTrigers.Hide.ToString());
     }
     // Update is called once per frame
     void Update()
