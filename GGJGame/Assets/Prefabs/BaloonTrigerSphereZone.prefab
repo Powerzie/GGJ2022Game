@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8565758587334579132}
   - component: {fileID: 8565758587334579135}
   m_Layer: 0
-  m_Name: TrigerSphereZone
+  m_Name: BaloonTrigerSphereZone
   m_TagString: TextBaloonTriger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

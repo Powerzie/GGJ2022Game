@@ -9,7 +9,6 @@ public class AppleTreeLogic : MonoBehaviour
     public  PlayerMovement playerMovementScript;
     public  List<GameObject> dropObjects;
 
-    private int amoutOfPresses = 0;
     private bool playerInTriger;
     private string buttonToPress;
 
