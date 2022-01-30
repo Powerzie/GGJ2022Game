@@ -6,7 +6,8 @@ public class FinalQuestZone : MonoBehaviour
 {
   public Animator crystalAnimator;
   public Animator cameraAnimator;
-  public AppleQuestLogic AppleQuestLogicSRC;
+    public Animator worldTreeAnimator;
+    public AppleQuestLogic AppleQuestLogicSRC;
 
     public void RunCameraAnimation()
     {
@@ -16,6 +17,7 @@ public class FinalQuestZone : MonoBehaviour
     {
         if (other.tag == "Player" && AppleQuestLogicSRC.IsQuestDone() && AppleQuestLogicSRC.IsPlayerBringApples())
         {
+            worldTreeAnimator.SetTrigger("ClearTree");
             crystalAnimator.SetTrigger("CrystalShine");
             cameraAnimator.SetTrigger("CameraFly");
         }
