@@ -6,10 +6,6 @@ public class EndZoneAppleQuest : MonoBehaviour
 {
    public AppleQuestLogic playerAppleQuestLogic;
     public List<Animator> foxesAnimator;
-    void Start()
-    {
-        
-    }
     private void OnTriggerEnter(Collider collision)
     {
         if(collision.gameObject.tag=="Player"&& playerAppleQuestLogic.IsQuestDone())

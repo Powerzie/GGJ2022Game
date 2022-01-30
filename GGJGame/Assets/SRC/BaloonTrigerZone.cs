@@ -4,6 +4,7 @@ using UnityEngine;
 enum BaloonTrigers { Show ,Hide};
 public class BaloonTrigerZone : MonoBehaviour
 {
+    public AppleQuestLogic AppleQuestLogicSRC;
     public GameObject targetBaloon;
     public Animator reactionAnimator;
     private Animator targetAnimator;
@@ -17,8 +18,13 @@ public class BaloonTrigerZone : MonoBehaviour
     {
         if(other.tag=="Player")
         {
+            if (AppleQuestLogicSRC.IsQuestDone())
+            {
+                reactionAnimator.SetTrigger("AppleWinned");
+            }
             reactionAnimator.SetTrigger("React");
             targetAnimator.SetTrigger(BaloonTrigers.Show.ToString());
+         
         }
     }
     private void OnTriggerExit(Collider other)
