@@ -21,16 +21,19 @@ public class AppleTreeLogic : MonoBehaviour
     {
         if (playerInTriger && Input.GetKey(buttonToPress))
         {
-            DrobObject();
-            if (dropObjects.Count-1==0)
-            {
-                QuestDone();
-            }
+         
 
             if (buttonToPress == "a")
                 buttonToPress = "d";
             else
+            {
                 buttonToPress = "a";
+                DrobObject();
+                if (dropObjects.Count - 1 == 0)
+                {
+                    QuestDone();
+                }
+            }
 
             hintText.GetComponent<TextMesh>().text = buttonToPress;
         }
