@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-enum BaloonTrigers { Show ,Hide};
 public class BaloonTrigerZone : MonoBehaviour
 {
     public AppleQuestLogic AppleQuestLogicSRC;
@@ -20,7 +19,7 @@ public class BaloonTrigerZone : MonoBehaviour
         {
             if (AppleQuestLogicSRC.IsQuestDone())
             {
-                reactionAnimator.SetTrigger("AppleWinned");
+                targetAnimator.SetTrigger("AppleWinned");
             }
             reactionAnimator.SetTrigger("React");
             targetAnimator.SetTrigger(BaloonTrigers.Show.ToString());

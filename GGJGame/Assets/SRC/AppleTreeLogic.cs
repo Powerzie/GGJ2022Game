@@ -8,6 +8,7 @@ public class AppleTreeLogic : MonoBehaviour
     public  GameObject hintText;
     public  PlayerMovement playerMovementScript;
     public  List<GameObject> dropObjects;
+    public Animator TreeAnimator;
 
     private bool playerInTriger;
     private string buttonToPress;
@@ -19,10 +20,14 @@ public class AppleTreeLogic : MonoBehaviour
     }
     void Update()
     {
+        if (playerInTriger && Input.GetKey("f"))
+        {
+            RunQuest();
+            return;
+        }
         if (playerInTriger && Input.GetKey(buttonToPress))
         {
-         
-
+            TreeAnimator.SetTrigger("HitTree");
             if (buttonToPress == "a")
                 buttonToPress = "d";
             else
@@ -38,10 +43,7 @@ public class AppleTreeLogic : MonoBehaviour
             hintText.GetComponent<TextMesh>().text = buttonToPress;
         }
 
-        if (playerInTriger && Input.GetKey("f"))
-        {
-            RunQuest();
-        }
+       
     }
     private void QuestDone()
     {

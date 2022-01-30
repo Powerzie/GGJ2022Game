@@ -64,4 +64,8 @@ public class AppleQuestLogic : MonoBehaviour
         }
         floatingApples = null;
     }
+    public bool IsPlayerBringApples()
+    {
+        return floatingApples==null;
+    }
 }
